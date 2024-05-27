@@ -68,6 +68,11 @@ function effacerTerminal() {
 }
 
 function montrerCorrection() {
+    const div = document.getElementById("div-correction");
+    if (div.style.left === "50%") {
+        fermerCorrection();
+        return;
+    }
     document.getElementById("div-correction").style.left = "50%";
 }
 
@@ -75,9 +80,25 @@ function fermerCorrection() {
     document.getElementById("div-correction").style.left = "125%";
 }
 
+function montrerSelection() {
+    const div = document.getElementById("div-selection");
+    if (div.style.left === "50%") {
+        fermerSelection();
+        return;
+    }
+    document.getElementById("div-selection").style.left = "50%";
+}
+
+function fermerSelection() {
+    document.getElementById("div-selection").style.left = "125%";
+}
+
 document.getElementById("effacer").onclick = effacerTerminal;
 document.getElementById("montrer_correction").onclick = montrerCorrection;
 document.getElementById("fermer").onclick = fermerCorrection;
+
+document.getElementById('montrer_selction').onclick = montrerSelection;
+document.getElementById('fermer-selection').onclick = fermerSelection;
 
 function chargerSujetRandom() {
     const random = Math.floor(Math.random() * nbSujets) + 1;
@@ -91,9 +112,24 @@ document.getElementById("next-sujet").onclick = () => {
     chargerSujetRandom();
 }
 
+function creerSelection() {
+    selection = document.getElementById("selection");
+    for (let i=0; i <= nbSujets; i++) {
+        let bouton = document.createElement("button");
+        bouton.className = "bouton-selection";
+        bouton.innerHTML = i.toString();
+        bouton.onclick = function () {
+            chargerSujet(i);
+            chargerCorrection(i);
+        }
+        selection.appendChild(bouton);
+    }
+}
+
 function main() {
-    chargerSujet(4);
-    chargerCorrection(4);
+    creerSelection();
+    chargerSujet(1);
+    chargerCorrection(1);
 }
 
 main();

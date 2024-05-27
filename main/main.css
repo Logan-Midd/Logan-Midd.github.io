@@ -122,8 +122,9 @@ section {
     transition: left 1s;
 }
 
-#correction {
+.side {
     background-color: #26282B;
+    border: #5F85DB 10px solid;
     width: 460px;
     margin: 0 auto;
     min-height: min-content;
@@ -138,8 +139,8 @@ pre {
 
 #fermer {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 0;
+    right: 0;
     background-color: #353941;
     color: white;
     border: none;
@@ -151,18 +152,39 @@ pre {
     border-bottom: #5F85DB solid 10px;
 }
 
-#fermer {
+#fermer-selection {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #353941;
+    color: white;
+    border: none;
+    font-size: 36px;
+    width: 20px;
+    height: 100%;
+    border-left: #5F85DB solid 10px;
+}
+
+#fermer, #fermer-selection {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#fermer > i {
+#fermer {
     transition: font-size 200ms;
 }
 
 #fermer > i:hover {
    font-size: 44px;
+}
+
+#fermer-selection:hover  {
+    background-color: rgba(95, 133, 219, 0.58);
+}
+
+#fermer-selection {
+    transition: background-color 200ms;
 }
 
 .py-terminal {
@@ -173,4 +195,22 @@ pre {
 
 #div-repl {
     background-color: white;
+}
+
+#selection {
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 98%;
+}
+
+.bouton-selection {
+    background-color: #5F85DB;
+    border: none;
+    border-radius: 2px;
+    width: 58px;
+    height: 50px;
+    font-family: "Ubuntu", serif;
+    font-size: 25px;
 }
