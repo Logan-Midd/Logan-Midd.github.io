@@ -115,8 +115,14 @@ document.getElementById("next-sujet").onclick = () => {
 }
 
 function creerSelection() {
-    selection = document.getElementById("selection");
-    for (let i=0; i <= nbSujets; i++) {
+    const selection = document.getElementById("selection");
+
+    const fermerSelection = document.createElement('button');
+    fermerSelection.className = "bouton-selection";
+    fermerSelection.id = "fermer-selection";
+    fermerSelection.innerHTML;
+
+    for (let i = 1; i <= nbSujets; i++) {
         let bouton = document.createElement("button");
         bouton.className = "bouton-selection";
         bouton.innerHTML = i.toString();

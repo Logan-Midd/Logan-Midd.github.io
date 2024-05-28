@@ -14,9 +14,14 @@
 
     <body>
 
+        <py-env style="visibility: hidden;position: absolute">
+            - random
+            - math
+        </py-env>
+
         <nav>
             <a href="../index.html"><i class="fa-solid fa-house"></i></a>
-            <i class="fa-solid fa-circle-right" id="next-sujet"></i>
+            <div id="next-sujet"><i class="fa-solid fa-circle-right"></i></div>
             <div id="montrer_correction"><i class="fa-solid fa-code"></i></div>
             <div id="montrer_selction"><i class="fa-solid fa-bars"></i></div>
         </nav>
@@ -47,8 +52,9 @@
         </section>
 
         <section id="div-selection" class="side">
-            <div id="selection"></div>
-            <button id="fermer-selection"></button>
+            <div id="selection">
+                <button class="bouton-selection" id="fermer-selection"><i class="fa-solid fa-xmark"></i></button>
+            </div>
         </section>
 
     </body>
