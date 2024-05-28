@@ -202,7 +202,7 @@ pre {
     gap: 5px;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 98%;
+    width: 100%;
 }
 
 .bouton-selection {
@@ -213,4 +213,12 @@ pre {
     height: 50px;
     font-family: "Ubuntu", serif;
     font-size: 25px;
+}
+
+.bouton-selection:hover {
+    background-color: rgba(95, 133, 219, 0.71);
+}
+
+.bouton-selection:active {
+    background-color: rgba(95, 133, 219, 0.5);
 }

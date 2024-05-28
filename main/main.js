@@ -68,6 +68,7 @@ function effacerTerminal() {
 }
 
 function montrerCorrection() {
+    fermerSelection();
     const div = document.getElementById("div-correction");
     if (div.style.left === "50%") {
         fermerCorrection();
@@ -81,6 +82,7 @@ function fermerCorrection() {
 }
 
 function montrerSelection() {
+    fermerCorrection();
     const div = document.getElementById("div-selection");
     if (div.style.left === "50%") {
         fermerSelection();
